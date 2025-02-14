@@ -2,53 +2,53 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFBED"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/milktea"
+    tools:context=".UserActivity">
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        app:srcCompat="@drawable/exit"
+        android:layout_gravity="right"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_gravity="right"
-        android:padding="8dp"
         android:background="@drawable/exit_background"
+        android:padding="8dp"
         tools:srcCompat="@drawable/exit" />
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="100dp"
         android:layout_gravity="center"
-        android:padding="15dp"
+        android:layout_marginTop="80dp"
         android:background="@drawable/profile_background"
-        app:srcCompat="@drawable/profile"
-        tools:srcCompat="@drawable/profile" />
+        android:padding="15dp"
+        tools:srcCompat="@drawable/user" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:textSize="28sp"
+        android:text="user name"
         android:textAlignment="center"
         android:textColor="@color/brown"
-        android:text="user name" />
+        android:textSize="28sp" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/brown"
-        android:textSize="18sp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="50dp"
+        android:text="xxx@gmail.com"
         android:textAlignment="center"
-        android:text="xxx@gmail.com" />
+        android:textColor="@color/brown"
+        android:textSize="18sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -57,8 +57,8 @@
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/fream_layout"
-        android:padding="10dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="10dp">
 
         <ImageView
             android:id="@+id/imageView7"
@@ -71,30 +71,34 @@
             android:id="@+id/textView13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_gravity="center"
             android:layout_marginStart="10dp"
-            android:textSize="25sp"
-            android:textStyle="bold"
+            android:layout_weight="1"
+            android:text="Edit Profile"
             android:textColor="@color/brown"
-            android:text="Edit Profile" />
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/imageView8"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_weight="0"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:scaleX="-1"
+
+            android:tint="@color/brown"
+            tools:srcCompat="?attr/actionModeCloseDrawable" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
-        android:background="@drawable/fream_layout"
-        android:padding="10dp"
         android:layout_marginBottom="8dp"
-        android:orientation="horizontal">
+        android:background="@drawable/fream_layout"
+        android:orientation="horizontal"
+        android:padding="10dp">
 
         <ImageView
             android:id="@+id/imageView9"
@@ -107,21 +111,24 @@
             android:id="@+id/textView14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_gravity="center"
             android:layout_marginStart="10dp"
-            android:textSize="25sp"
-            android:textStyle="bold"
+            android:layout_weight="1"
+            android:text="Add Pin"
             android:textColor="@color/brown"
-            android:text="Add Pin" />
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/imageView10"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_weight="0"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:scaleX="-1"
+            android:tint="@color/brown"
+            tools:srcCompat="?attr/actionModeCloseDrawable" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="70dp"
@@ -129,8 +136,8 @@
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/fream_layout"
-        android:padding="10dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="10dp">
 
         <ImageView
             android:id="@+id/imageView11"
@@ -143,30 +150,33 @@
             android:id="@+id/textView15"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_gravity="center"
             android:layout_marginStart="10dp"
-            android:textSize="25sp"
-            android:textStyle="bold"
+            android:layout_weight="1"
+            android:text="Settings"
             android:textColor="@color/brown"
-            android:text="Settings" />
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/imageView12"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_weight="0"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:scaleX="-1"
+            android:tint="@color/brown"
+            tools:srcCompat="?attr/actionModeCloseDrawable" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
         android:background="@drawable/fream_background_layout"
-        android:padding="10dp"
+        android:orientation="horizontal"
 
-        android:orientation="horizontal">
+        android:padding="10dp">
 
         <ImageView
             android:id="@+id/imageView6"
@@ -179,20 +189,62 @@
             android:id="@+id/textView12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_gravity="center"
             android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:text="Log out"
+            android:textColor="@color/milktea"
             android:textSize="25sp"
-            android:textStyle="bold"
-            android:textColor="@color/brown"
-            android:text="Log out" />
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/imageView14"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_weight="0"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:scaleX="-1"
+            android:tint="@color/white"
+            tools:srcCompat="?attr/actionModeCloseDrawable" />
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/taskbar_background"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:tint="@color/white"
+            tools:srcCompat="@drawable/home" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            tools:srcCompat="@drawable/scan" />
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            tools:srcCompat="@drawable/storage" />
+
+        <ImageView
+            android:id="@+id/imageView15"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            tools:srcCompat="@drawable/user" />
+    </LinearLayout>
 </LinearLayout>

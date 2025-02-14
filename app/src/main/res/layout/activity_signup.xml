@@ -24,8 +24,8 @@
                 app:srcCompat="@drawable/logo"
                 tools:srcCompat="@drawable/logo" />
 
-            <TextView
-                android:id="@+id/textView5"
+            <EditText
+                android:id="@+id/edt_username_signup"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:background="@drawable/edittext_background"
@@ -38,8 +38,8 @@
                 android:hint="User name"
                 android:text="" />
 
-            <TextView
-                android:id="@+id/textView6"
+            <EditText
+                android:id="@+id/edt_password_signup"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:background="@drawable/edittext_background"
@@ -52,8 +52,8 @@
                 android:hint="Pass word"
                 android:text="" />
 
-            <TextView
-                android:id="@+id/textView7"
+            <EditText
+                android:id="@+id/edt_confirmpassword"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:background="@drawable/edittext_background"
