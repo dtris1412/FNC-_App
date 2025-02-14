@@ -24,5 +24,12 @@ public class HomeActivity extends AppCompatActivity {
         });
         vf = findViewById(R.id.vf);
         vf.startFlipping();
+        // Thiết lập hiệu ứng chuyển đổi ảnh
+        vf.setInAnimation(this, R.anim.slide_in_right);
+        vf.setOutAnimation(this, R.anim.slide_out_left);
+
+        // Bắt đầu tự động chuyển ảnh
+        vf.setFlipInterval(3000);
+        vf.startFlipping();
     }
 }

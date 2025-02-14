@@ -19,18 +19,21 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:srcCompat="@tools:sample/avatars" />
+            app:srcCompat="@drawable/test_item1"
+            tools:srcCompat="@drawable/test_item1" />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
 
-            tools:srcCompat="@tools:sample/avatars" />
+            app:srcCompat="@drawable/test_item2"
+            tools:srcCompat="@drawable/test_item2" />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:srcCompat="@tools:sample/avatars" />
+            app:srcCompat="@drawable/test_item3"
+            tools:srcCompat="@drawable/test_item3" />
     </ViewFlipper>
 
 
