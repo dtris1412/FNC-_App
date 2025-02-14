@@ -1,6 +1,9 @@
 package com.example.fnc_app;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ViewFlipper;
 
 import androidx.activity.EdgeToEdge;
@@ -8,28 +11,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.fragment.app.Fragment;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeFragment extends Fragment {
 
-    ViewFlipper vf;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_home);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
-        vf = findViewById(R.id.vf);
-        vf.startFlipping();
-        // Thiết lập hiệu ứng chuyển đổi ảnh
-        vf.setInAnimation(this, R.anim.slide_in_right);
-        vf.setOutAnimation(this, R.anim.slide_out_left);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.activity_home, container, false);
 
-        // Bắt đầu tự động chuyển ảnh
-        vf.setFlipInterval(3000);
-        vf.startFlipping();
     }
+
+
+
 }

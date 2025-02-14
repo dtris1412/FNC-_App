@@ -5,9 +5,9 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/milktea"
-    tools:context=".UserActivity">
+    android:orientation="vertical"
+    tools:context=".UserFragment">
 
     <ImageView
         android:id="@+id/imageView3"
@@ -18,6 +18,7 @@
         android:layout_marginEnd="20dp"
         android:background="@drawable/exit_background"
         android:padding="8dp"
+        app:srcCompat="@drawable/exit"
         tools:srcCompat="@drawable/exit" />
 
     <ImageView
@@ -25,9 +26,10 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/profile_background"
         android:padding="15dp"
+        app:srcCompat="@drawable/user"
         tools:srcCompat="@drawable/user" />
 
     <TextView
@@ -65,7 +67,8 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_weight="0"
-            tools:srcCompat="@drawable/chuthich" />
+            app:srcCompat="@drawable/edit"
+            tools:srcCompat="@drawable/edit" />
 
         <TextView
             android:id="@+id/textView13"
@@ -86,7 +89,8 @@
             android:layout_weight="0"
             android:scaleX="-1"
 
-            android:tint="@color/brown"
+            app:srcCompat="?attr/actionModeCloseDrawable"
+            app:tint="@color/brown"
             tools:srcCompat="?attr/actionModeCloseDrawable" />
     </LinearLayout>
 
@@ -105,6 +109,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_weight="0"
+            app:srcCompat="@drawable/lock"
             tools:srcCompat="@drawable/lock" />
 
         <TextView
@@ -125,7 +130,8 @@
             android:layout_height="50dp"
             android:layout_weight="0"
             android:scaleX="-1"
-            android:tint="@color/brown"
+            app:srcCompat="?attr/actionModeCloseDrawable"
+            app:tint="@color/brown"
             tools:srcCompat="?attr/actionModeCloseDrawable" />
     </LinearLayout>
 
@@ -144,6 +150,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_weight="0"
+            app:srcCompat="@drawable/setting"
             tools:srcCompat="@drawable/setting" />
 
         <TextView
@@ -164,7 +171,8 @@
             android:layout_height="50dp"
             android:layout_weight="0"
             android:scaleX="-1"
-            android:tint="@color/brown"
+            app:srcCompat="?attr/actionModeCloseDrawable"
+            app:tint="@color/brown"
             tools:srcCompat="?attr/actionModeCloseDrawable" />
     </LinearLayout>
 
@@ -173,6 +181,7 @@
         android:layout_height="70dp"
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
+
         android:background="@drawable/fream_background_layout"
         android:orientation="horizontal"
 
@@ -183,6 +192,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_weight="0"
+            app:srcCompat="@drawable/exit"
             tools:srcCompat="@drawable/exit" />
 
         <TextView
@@ -203,48 +213,26 @@
             android:layout_height="50dp"
             android:layout_weight="0"
             android:scaleX="-1"
-            android:tint="@color/white"
+            app:srcCompat="?attr/actionModeCloseDrawable"
+            app:tint="@color/white"
             tools:srcCompat="?attr/actionModeCloseDrawable" />
     </LinearLayout>
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginEnd="30dp"
-        android:background="@drawable/taskbar_background"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="15dp">
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_weight="1"
-            android:tint="@color/white"
-            tools:srcCompat="@drawable/home" />
+    </FrameLayout>
 
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_weight="1"
-            tools:srcCompat="@drawable/scan" />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/milktea"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav_menu">
 
-        <ImageView
-            android:id="@+id/imageView13"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_weight="1"
-            tools:srcCompat="@drawable/storage" />
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
-        <ImageView
-            android:id="@+id/imageView15"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_weight="1"
-            tools:srcCompat="@drawable/user" />
-    </LinearLayout>
 </LinearLayout>
