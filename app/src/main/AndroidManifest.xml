@@ -13,13 +13,11 @@
         android:theme="@style/Theme.FNC_App"
         tools:targetApi="31">
         <activity
-            android:name=".HomeFragment"
-            android:exported="false">
-
-        </activity>
+            android:name=".MainActivity"
+            android:exported="false" />
         <activity
-            android:name=".UserFragment"
-            android:exported="true" >
+            android:name=".HomeFragment"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,10 +25,11 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".UserActivity"
+            android:exported="false" />
+        <activity
             android:name=".SignupActivity"
-            android:exported="false">
-
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".BaseActivity"
             android:exported="false" />

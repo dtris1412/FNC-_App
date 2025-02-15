@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/milktea"
+    android:orientation="vertical"
+    tools:context=".HomeFragment">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ViewFlipper
+                android:id="@+id/vf"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:autoStart="true"
+                android:flipInterval="3000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/test_item1"
+                    tools:srcCompat="@drawable/test_item1" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    app:srcCompat="@drawable/test_item2"
+                    tools:srcCompat="@drawable/test_item2" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/test_item3"
+                    tools:srcCompat="@drawable/test_item3" />
+            </ViewFlipper>
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/imageView13"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="8dp"
+                        app:srcCompat="@drawable/shirt"
+                        tools:src="@tools:sample/avatars"
+                        tools:srcCompat="@drawable/shirt" />
+
+                    <ImageView
+                        android:id="@+id/imageView15"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="8dp"
+                        app:srcCompat="@drawable/pant"
+                        tools:src="@tools:sample/avatars"
+                        tools:srcCompat="@drawable/pant" />
+
+                    <ImageView
+                        android:id="@+id/imageView16"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="8dp"
+                        app:srcCompat="@drawable/shoses"
+                        tools:src="@tools:sample/avatars"
+                        tools:srcCompat="@drawable/shoses" />
+
+                    <ImageView
+                        android:id="@+id/imageView17"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="8dp"
+                        app:srcCompat="@drawable/hat"
+                        tools:src="@tools:sample/avatars"
+                        tools:srcCompat="@drawable/hat" />
+
+                    <ImageView
+                        android:id="@+id/imageView18"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="8dp"
+                        app:srcCompat="@drawable/belt"
+                        tools:src="@tools:sample/avatars"
+                        tools:srcCompat="@drawable/belt" />
+
+                    <ImageView
+                        android:id="@+id/imageView19"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="8dp"
+                        app:srcCompat="@drawable/jewelry"
+                        tools:src="@tools:sample/avatars"
+                        tools:srcCompat="@drawable/jewelry" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Popular"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView2" />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/milktea"
+        app:layout_constraintBottom_toBottomOf="@+id/nestedScrollView"
+        app:menu="@menu/bottom_nav_menu">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
