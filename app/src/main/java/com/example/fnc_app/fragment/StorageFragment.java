@@ -2,13 +2,22 @@ package com.example.fnc_app.fragment;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.fnc_app.ItemStorage;
 import com.example.fnc_app.R;
+import com.example.fnc_app.StorageAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -17,12 +26,13 @@ import com.example.fnc_app.R;
  */
 public class StorageFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    private RecyclerView recyclerView;
+    private StorageAdapter adapter;
+    private List<ItemStorage> itemList;
+
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
@@ -30,15 +40,6 @@ public class StorageFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment StorageFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static StorageFragment newInstance(String param1, String param2) {
         StorageFragment fragment = new StorageFragment();
         Bundle args = new Bundle();
@@ -60,7 +61,22 @@ public class StorageFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_storage, container, false);
+        View view = inflater.inflate(R.layout.fragment_storage, container, false);
+
+        // Ánh xạ RecyclerView
+        recyclerView = view.findViewById(R.id.recyclerview);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        // Tạo danh sách item
+        itemList = new ArrayList<>();
+        itemList.add(new ItemStorage("T-Shirt", R.drawable.tshirt));
+        itemList.add(new ItemStorage("Hoodie", R.drawable.hoodie));
+        itemList.add(new ItemStorage("Jacket", R.drawable.jacket));
+
+        // Cấu hình Adapter
+        adapter = new StorageAdapter(itemList);
+        recyclerView.setAdapter(adapter);
+
+        return view;
     }
 }
